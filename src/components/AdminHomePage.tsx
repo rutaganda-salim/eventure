@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import hat from "../../public/hat.png";
-import Card from "./ui/card";
+import Card from "./ui/card"
 
 type Event = {
   id: string;
