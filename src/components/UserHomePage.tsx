@@ -134,7 +134,7 @@ const UserHomePage = () => {
               Join these <span className="text-purple-600">brands</span>
             </h2>
             <p className="mb-12 text-center text-muted-foreground">
-              We've had the pleasure of working with industry-defining brands.
+              We have had the pleasure of working with industry-defining brands.
               These are just some of them.
             </p>
             <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">

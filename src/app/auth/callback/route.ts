@@ -16,5 +16,5 @@ export async function GET(request: NextRequest) {
     await supabase.auth.exchangeCodeForSession(code)
   }
 
-  return NextResponse.redirect(`http://localhost:3000/admin/dashboard`)
+  return NextResponse.redirect(`/admin/dashboard`)
 }

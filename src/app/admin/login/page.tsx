@@ -33,7 +33,7 @@ export default function SignInPage() {
             Welcome Back to the Event Management Portal!
           </h1>
           <p className="text-center text-lg mb-8 max-w-md px-4">
-            We’re excited to help you create, organize, and manage your events
+            We&apos;re excited to help you create, organize, and manage your events
             seamlessly. Please log in using your credentials below to get
             started.
           </p>
