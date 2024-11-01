@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import hat from "../../public/hat.png";
-import Card from "@/components/ui/card";
+import Card from "./ui/Card";
 
 type Event = {
   id: string;
@@ -73,12 +73,12 @@ const AdminHomePage = () => {
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-      {events.map((event) => (
+        {events.map((event) => (
           <Card
             key={event.id}
             title={event.title}
             description={event.description}
-            seats={event.seats} 
+            seats={event.seats}
             date={event.date}
             image={event.image}
           />
