@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import hat from "../../public/hat.png";
-import Card from "./ui/Card";
+import Card from "./ui/card";
 
 type Event = {
   id: string;
@@ -78,7 +78,7 @@ const AdminHomePage = () => {
             key={event.id}
             title={event.title}
             description={event.description}
-            seats={event.seats.toString()} // If seats is a number, convert to string if needed
+            seats={event.seats} 
             date={event.date}
             image={event.image}
           />

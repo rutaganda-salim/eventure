@@ -1,22 +1,14 @@
 // pages/api/events.js
 
-import { MongoClient } from 'mongodb';
-import {  NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { connectToDatabase } from '@/lib/mongodb'; // Adjust the path if necessary
 
-const uri = process.env.MONGODB_URI;
-
-if (!uri) {
-  throw new Error('MongoDB connection string is not defined in environment variables.');
-}
-
-const client = new MongoClient(uri);
-
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    await client.connect();
-    const database = client.db('test');
-    const eventsCollection = database.collection('eventuredb');
-    const usersCollection = database.collection('users'); // Assuming you have a users collection
+    // Use the connectToDatabase function to get the client and database
+    const { db } = await connectToDatabase();
+    const eventsCollection = db.collection('eventuredb');
+    const usersCollection = db.collection('users'); // Assuming you have a users collection
 
     // Fetch events and stats
     const totalEvents = await eventsCollection.countDocuments();
@@ -39,7 +31,5 @@ export async function GET() {
   } catch (error) {
     console.error('Error fetching events:', error);
     return NextResponse.json({ error: 'Failed to fetch events' }, { status: 500 });
-  } finally {
-    await client.close();
   }
 }
