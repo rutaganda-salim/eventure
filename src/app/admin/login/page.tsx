@@ -37,7 +37,7 @@ export default function SignInPage() {
             seamlessly. Please log in using your credentials below to get
             started.
           </p>
-          <p className="text-center text-base max-w-md px-4">Don't have an account yet?</p>
+          <p className="text-center text-base max-w-md px-4">Don&apos;t have an account yet?</p>
           <Link
             href={"/admin/signup"}
             className="mt-4 rounded-md bg-[#6D717D] px-12 py-3 backdrop-blur-sm transition-colors  duration-300 hover:bg-[#4E545A]"

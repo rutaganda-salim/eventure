@@ -1,7 +1,7 @@
 // pages/api/events.js
 
 import { MongoClient } from 'mongodb';
-import { NextRequest, NextResponse } from 'next/server';
+import {  NextResponse } from 'next/server';
 
 const uri = process.env.MONGODB_URI;
 
